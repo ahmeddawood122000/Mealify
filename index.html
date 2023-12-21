@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/css.css" />
-    <link rel="stylesheet" href="css/dark.css" />
   </head>
   <body>  
     <!-- start header -->
@@ -20,16 +19,17 @@
         <h1 class="logo">
           <a href="#" class="logo">Mealify</a>
         </h1>
-        <ul class="main-nav">
-          <li><a href="#home" class="active">Home</a></li>
+        <ul class="main-nav" id="mainNav">
+          <li><a href="#home"  class="active">Home</a>
+            <i  class="fa-solid fa-x" id="closeMenu"></i></li>
           <li><a href="#chefs">Chefs</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="dark-mode">
-          <i class="fa-solid fa-moon"></i>
+          <i id="iDarkLight" class="fa-solid fa-moon"></i>
         </div>
-        <a href="#main-nav"><i class="fa-solid fa-bars"></i></a>
+        <a href="#main-nav" id="aMainMenu"><i class="fa-solid fa-bars"></i></a>
       </div>
     </div>
     <!-- end header -->
@@ -407,6 +407,7 @@
         </div>
       </div>
     </div>
+    <script src="scripts/main.js"></script>
     <!-- end footer -->
   </body>
 </html>
