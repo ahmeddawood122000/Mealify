@@ -1,7 +1,217 @@
+body {
+  background-color: #202020;
+}
+:root {
+  --main-color: hsl(35, 72%, 44%);
+  --secodary-color: #9f9f9f;
+}
+
 .header {
   background-color: #000000;
   color: white;
 }
 .header .container .logo {
   color: white;
+}
+.white {
+  color: white;
+}
+.sec-bg {
+  background-color: #252525;
+}
+.dark-bg {
+  background-color: var(--main-color);
+}
+.sec-bg1 {
+  background-color: hsl(60, 3%, 8%);
+}
+.h2 {
+  color: #fff;
+}
+.p {
+  color: #c5c4c4;
+}
+.span {
+  color: var(--main-color);
+}
+.header .container .logo a::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  bottom: 4px;
+  right: 0px;
+}
+.header .container ul li a.active::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  background-color: var(--main-color);
+  bottom: 17px;
+}
+.header .container ul li a:hover::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  background-color: var(--main-color);
+  bottom: 17px;
+}
+.section .container .content p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+  color: var(--secodary-color);
+}
+.section .container .content .buttons .contact {
+  width: 120px;
+  height: 35px;
+  background-color: var(--main-color);
+  border-radius: 0 15px 15px;
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.section .container .content .buttons .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to right,
+    var(--main-color) 0 50%,
+    transparent 50%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.section .container .content .buttons .video {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+.section .container .content .buttons .video i {
+  background-color: black;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.section .container .content .buttons .video:hover {
+  color: #cf4707;
+}
+
+.section .container .content .buttons .contact:hover {
+  background-color: #cf4707;
+}
+.chefs .title h2 {
+  font-size: 17px;
+  color: var(--secodary-color);
+  margin-top: 50px;
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
+.chefs .title p span {
+  color: var(--main-color);
+}
+.gallery {
+  background-color: #252525;
+}
+.gallery .title h2 {
+  font-size: 17px;
+  color: var(--secodary-color);
+  margin-top: 40px;
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+.gallery .title p span {
+  color: var(--main-color);
+}
+.contact .title h2 {
+  font-size: 17px;
+  color: var(--secodary-color);
+  margin-top: 40px;
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
+.contact .title p {
+  font-size: 40px;
+  font-family: cursive;
+  margin: 0 0 50px;
+  color: white;
+}
+.contact .title p span {
+  color: var(--main-color);
+}
+.contact .container .info .sec {
+  display: flex;
+  align-items: center;
+  background-color: #252525;
+  padding: 20px 10px;
+  width: calc(calc(100% - 20px) / 2);
+}
+.contact .container .info .sec .icon {
+  background-color: var(--main-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact .container .info .sec .content p {
+  margin: 5px 0;
+  color: white;
+}
+form [type="submit"] {
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px;
+  border-radius: 20px;
+  margin-top: 30px;
+  width: 156px;
+  border: none;
+  font-size: 19px;
+  cursor: pointer;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form [type="submit"]:hover {
+  background-color: hsl(51, 95%, 37%);
+}
+.footer .container .subscribe .box .info .submit {
+  width: 110px;
+  background-color: var(--main-color);
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+}
+.footer .container .subscribe .box .info .submit:hover {
+  background-color: hsl(51, 95%, 37%);
+}
+.footer .contact ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+  color: var(--main-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
 }

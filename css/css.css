@@ -1,5 +1,22 @@
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --main-color: #2196f3;
+  --main-color-alt: #1787e0;
+  --main-transition: 0.3s;
+  --main-margin-top: 25px;
+  --main-margin-bottom: 25px;
+  --section-background: #ececec;
+  --main-padding: 50px 40px;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -35,12 +52,12 @@ ul {
   position: fixed;
   background-color: white;
   width: 100%;
-  box-shadow: 0 0 10px #ddd;
+  box-shadow: 0 0px 10px #0000001b;
   z-index: 2;
 }
 
 .header .container {
-  padding: 10px 15px;
+  padding: 0 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -124,7 +141,7 @@ ul {
   }
 }
 .header .container ul li a.active {
-  color: black;
+  color: #777;
 }
 @media (max-width: 768px) {
   .header .container ul li a.active {
@@ -156,6 +173,7 @@ ul {
   background-color: hsl(0, 84%, 44%);
   bottom: 17px;
 }
+
 .header .container ul li a:hover::before {
   content: "";
   position: absolute;
@@ -204,10 +222,10 @@ ul {
 }
 
 .section .container {
-  padding: 30px 50px;
+  padding: 20px 40px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 50px;
 }
 
 @media (max-width: 768px) {
@@ -247,7 +265,7 @@ ul {
 .section .container .content .buttons {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  gap: 50px;
 }
 
 @media (max-width: 768px) {
@@ -258,7 +276,7 @@ ul {
 }
 
 .section .container .content .buttons .contact {
-  width: 100px;
+  width: 120px;
   height: 35px;
   background-color: hsl(0, 84%, 44%);
   border-radius: 0 15px 15px;
@@ -267,6 +285,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 14px;
 }
 
 .section .container .content .buttons .icon {
@@ -297,6 +316,8 @@ ul {
   color: black;
   display: flex;
   align-items: center;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
@@ -307,8 +328,8 @@ ul {
 
 .section .container .content .buttons .video i {
   background-color: white;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -316,7 +337,7 @@ ul {
 }
 
 .section .container .image img {
-  width: 400px;
+  width: 350px;
   margin-top: 10px;
 }
 
@@ -334,7 +355,7 @@ ul {
 
 /* start chefs */
 .chefs .container {
-  padding: 30px 50px;
+  padding: 20px 40px;
 }
 
 @media (max-width: 768px) {
@@ -363,10 +384,11 @@ ul {
   margin-top: 50px;
   letter-spacing: 1px;
   font-weight: 100;
+  margin-bottom: 10px;
 }
 
 .chefs .title p {
-  font-size: 60px;
+  font-size: 40px;
   font-family: cursive;
   margin: 0 0 50px;
 }
@@ -397,7 +419,7 @@ ul {
   border-radius: 6px;
   transition: 0.5s;
   overflow: hidden;
-  box-shadow: 0 0 10px #ddd;
+  box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
@@ -434,7 +456,7 @@ ul {
 .chefs .chefs-card .card .card-content p {
   color: #777;
   font-style: italic;
-  font-size: 18px;
+  font-size: 14px;
   margin-top: 5px;
 }
 
@@ -465,9 +487,13 @@ ul {
 
 /* end chefs */
 /*start gallery*/
-.gallery .container {
+.gallery {
   background-color: #ddd;
-  padding: 30px;
+}
+.gallery .container {
+  margin-top: var(--main-margin-top);
+  margin-bottom: var(--main-margin-bottom);
+  padding: var(--main-padding);
 }
 
 .gallery .title {
@@ -481,10 +507,11 @@ ul {
   margin-top: 40px;
   letter-spacing: 1px;
   font-weight: 100;
+  margin-bottom: 10px;
 }
 
 .gallery .title p {
-  font-size: 60px;
+  font-size: 40px;
   font-family: cursive;
   margin: 0 0 50px;
 }
@@ -577,7 +604,7 @@ ul {
 
 /*start contact*/
 .contact .container {
-  padding: 30px 50px;
+  padding: 20px 40px;
 }
 
 @media (max-width: 768px) {
@@ -597,10 +624,11 @@ ul {
   margin-top: 40px;
   letter-spacing: 1px;
   font-weight: 100;
+  margin-bottom: 10px;
 }
 
 .contact .title p {
-  font-size: 60px;
+  font-size: 40px;
   font-family: cursive;
   margin: 0 0 50px;
 }
@@ -640,12 +668,12 @@ ul {
   align-items: center;
   background-color: #ddd;
   padding: 20px 10px;
-  width: calc(calc(100% - 60px) / 2);
+  width: calc(calc(100% - 20px) / 2);
 }
 
 @media (max-width: 768px) {
   .contact .container .info .sec {
-    width: calc(100% - 20px);
+    width: 100%;
   }
 }
 
@@ -666,9 +694,6 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.contact .container .info .sec .content {
 }
 
 .contact .container .info .sec .content h3 {
@@ -696,10 +721,13 @@ ul {
 }
 
 .contact .container form .input {
+  width: 100%;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  width: 100%;
+
+  align-items: center;
+  justify-content: space-between;
 }
 
 @media (max-width: 768px) {
@@ -711,24 +739,24 @@ ul {
 .contact .container form input[name="your name"] {
   padding: 15px 20px;
   border: 2px solid #ddd;
-  width: calc(calc(100% - 110px) / 2);
+  width: calc(calc(100% - 20px) / 2);
 }
 
 @media (max-width: 768px) {
   .contact .container form input[name="your name"] {
-    width: calc(100% - 45px);
+    width: 100%;
   }
 }
 
 .contact .container form input[name="your email"] {
   padding: 15px 20px;
   border: 2px solid #ddd;
-  width: calc(calc(100% - 110px) / 2);
+  width: calc(calc(100% - 20px) / 2);
 }
 
 @media (max-width: 768px) {
   .contact .container form input[name="your email"] {
-    width: calc(100% - 45px);
+    width: 100%;
   }
 }
 
@@ -739,13 +767,13 @@ ul {
 
 form [name="subject"] {
   border: 2px solid #ddd;
-  width: calc(100% - 25px);
+  width: 100%;
   padding: 15px 10px;
 }
 
 form textarea {
   border: 2px solid #ddd;
-  width: calc(100% - 25px);
+  width: 100%;
   padding: 15px 10px;
   min-height: 109px;
 }
@@ -781,7 +809,8 @@ form [type="submit"]:hover {
 }
 
 .footer .container {
-  padding: 30px 50px;
+  padding: 20px 40px;
+
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
@@ -825,7 +854,7 @@ form [type="submit"]:hover {
   background-color: hsl(0, 84%, 44%);
   border-radius: 50%;
   bottom: 6px;
-  right: 135px;
+  left: 155px;
 }
 .footer .mealify p {
   color: white;
@@ -859,8 +888,6 @@ form [type="submit"]:hover {
   .footer .container .subscribe {
     width: 100%;
   }
-}
-.footer .container .subscribe .box {
 }
 .footer .container .subscribe .box h3 {
   margin: 0;
@@ -980,7 +1007,7 @@ form [type="submit"]:hover {
   }
 
   20% {
-    transform: translate(5px, 0);
+    transform: translate(1ppx, 1px);
   }
 
   40% {
