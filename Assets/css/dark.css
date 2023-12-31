@@ -25,6 +25,9 @@
 :root:has(.mode:checked) ul li a {
   color: #9f9f9f;
 }
+:root:has(.mode:checked) .header .container .main-nav ul li i {
+  color: #9f9f9f;
+}
 body:has(.mode:checked) .header ul li a:hover {
   color: #fff;
 }
@@ -33,7 +36,7 @@ body:has(.mode:checked) .header .container ul li a:hover:before {
   background-color: hsl(35, 72%, 44%);
 }
 body:has(.mode:checked) .header .container ul li a.active {
-  color: white;
+  color: #9f9f9f;
 }
 body:has(.mode:checked) .header .container .logo a::after {
   background-color: hsl(35, 72%, 44%);
@@ -65,7 +68,9 @@ body:has(.mode:checked) .section .container .content .buttons .icon {
     transparent 50%
   );
 }
-
+body:has(.mode:checked) .chefs .chefs-card .card .image::before {
+  background-image: url(../photos/team-shape-dark.svg);
+}
 body:has(.mode:checked) .chefs .chefs-card .card .card-content h3 {
   color: white;
 }

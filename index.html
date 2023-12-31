@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mealify</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&amp;family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <!--font awesome-->
     <link rel="stylesheet" href="css/fontawesome.min.css" />
 
@@ -21,8 +25,10 @@
           <a href="#" class="logo">Mealify</a>
         </h1>
         <ul class="main-nav" id="mainNav">
-          <li><a href="#home"  class="active">Home</a>
-            <i  class="fa-solid fa-x" id="closeMenu"></i></li>
+          <li><a href="#home"  class="">Home</a>
+            <i  class="fa-solid fa-x close-icon" >
+              <input type="radio" class="close" name="first">
+            </i></li>
           <li><a href="#chefs">Chefs</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -35,7 +41,7 @@
           </label>
         </div>
         <a href="#main-nav">
-          <input type="checkbox" class="check"/>
+          <input type="radio" class="check" name="first"/>
           <i class="fa-solid fa-bars white"></i></a>
       </div>
     </div>
@@ -350,7 +356,7 @@
             <input type="email" placeholder="Your Email" name="your email" />
           </div>
           <input type="text" placeholder="Subject" name="subject" />
-          <textarea placeholder="message" name="message"></textarea>
+          <textarea placeholder="message" name="message" ></textarea>
           <button class="send" type="submit">Send Message</button>
         </form>
       </div>
