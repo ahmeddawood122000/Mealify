@@ -14,7 +14,12 @@
 :root:has(.mode:checked) body {
   background-color: #202020;
 }
-
+:root:has(.close:checked) .header .container .main-nav {
+  opacity: 1;
+}
+:root:has(.check:checked) .header .container ul li i {
+  color: saddlebrown;
+}
 :root:has(.mode:checked) .header {
   background-color: hsl(0, 0%, 9%);
   color: white;
@@ -25,8 +30,14 @@
 :root:has(.mode:checked) ul li a {
   color: #9f9f9f;
 }
-:root:has(.mode:checked) .header .container .main-nav ul li i {
-  color: #9f9f9f;
+:root:has([name="first"]:checked) .header .container .main-nav {
+  background-color: white;
+}
+:root:has(.mode:checked) .header .container .main-nav li:hover {
+  opacity: 0;
+}
+:root:has(.mode:checked) .header .container .main-nav > a i:hover {
+  opacity: 0;
 }
 body:has(.mode:checked) .header ul li a:hover {
   color: #fff;
